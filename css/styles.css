@@ -18,6 +18,8 @@
     --box-shadow-color: #604545;
     --footer-contacts-color: #AB9898;
     --social-links-color: #AFB1B8;
+    --placeholder-color: rgba(255, 255, 255, 0.6); 
+    --placeholder-user-message-color: rgba(117, 117, 117, 0.5);
     --primary-font: 'Roboto', sans-serif;
     --secondary-font: 'Raleway', sans-serif;
     --button-font: inherit;
@@ -670,6 +672,69 @@ body {
     margin-right: 70px;
 }
 
+.footer-box{
+    margin-right: 90px;
+}
+
+.footer-subscription{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 93px;
+}
+
+.subscription{     
+    color: var(--accent-text-color);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 20px; 
+    margin-left: 93px;   
+}
+
+.mail-form{     
+    color: var(--placeholder-color);
+    background-color: var(--secondary-background-color);
+    width: 358px;
+    height: 50px;
+    padding-top: 15px;
+    padding-left: 16px;
+    padding-bottom: 15px;
+    margin-right: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.footer-button{      
+    color: var(--accent-text-color);
+    background-color: var(--btn-order-background-color);
+    width: 200px;
+    height: 50px; 
+    padding: 10px 28px;       
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    text-align: center;
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: var(--active-color);
+}
+
+.icon-send{   
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%);   
+    margin-left: 10px;    
+}
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -688,6 +753,7 @@ body {
     transform: translate(-50%, -50%);
     width: 528px;
     height: 581px;
+    padding: 40px;
     background-color: var(--main-background-color);    
 }
 
@@ -711,6 +777,142 @@ body {
     opacity: 0;
     pointer-events: none;
 }
+
+.modal-form-tittle{
+    color: var(--title-text-color);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 12px;    
+    }
+
+    .modal-form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-form-box{
+        position: relative;
+        display: block;
+    }
+
+    .modal-form-input{
+        width: 100%;
+        height: 40px;
+        border: 1px solid #21212133;
+        border-radius: 4px;
+        padding-left: 42px;
+        cursor: pointer;
+        transition: border-color var(--transition-dur-and-func);
+    }
+
+    .modal-form-input:focus{
+        border-color: var(--active-color);
+        outline: none;
+    }
+
+    .modal-form-description{
+        display: block;
+        color: var(--primary-text-color);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        text-align: left;
+        padding-bottom: 4px;
+    }
+
+    .modal-form-field{
+        margin-bottom: 10px;
+    }
+
+    .icon-person,
+    .icon-phone,
+    .icon-email{
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        display: block;
+        width: 18px;
+        height: 18px;
+        transition: fill var(--transition-dur-and-func);
+    }
+
+    .modal-form-input:focus + .icon-person{
+    fill: var(--active-color);
+    }
+
+    .modal-form-input:focus + .icon-phone{
+    fill: var(--active-color);
+    }
+
+    .modal-form-input:focus + .icon-email{
+    fill: var(--active-color);
+    }
+
+    .modal-form-message{
+        width: 100%;
+        height: 120px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        padding: 12px 16px;
+        resize: none;
+    transition: border-color var(--transition-dur-and-func);
+    }
+
+    .modal-form-message:focus{
+    border-color: var(--active-color);
+    outline: none;
+    }
+
+    .modal-form-message::placeholder{
+    color: var(--placeholder-user-message-color);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    }
+
+/* .checkbox-wrapper{
+display: flex;
+align-items: center;
+} */
+
+    
+/* .modal-form-check-field{
+    display: flex;
+    align-items: center;
+    margin-right: 9px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--primary-text-color);
+}
+
+    .box-check-agree{
+        width: 16px;
+        height: 15px;
+        border: 2px solid #212121;
+        border-radius: 3px;
+        fill: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;   
+    }
+
+.modal-form-check+.modal-form-check-field .box-check-agree{
+    fill: var(--active-color);
+    border: none;
+}
+
+.modal-form-check+.icon-check{
+    background-color: var(--btn-order-background-color);
+} */
 
 /* Portfolio styles */
 
