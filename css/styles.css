@@ -180,12 +180,12 @@ body {
 }
 
 .icon-mail :hover,
-.icon-phone :hover {
+.icon-phone-header :hover {
     fill: var(--active-color);
 }
 
 .icon-mail :focus,
-.icon-phone :focus {
+.icon-phone-header :focus {
     fill: var(--active-color);
 }
 
@@ -475,7 +475,7 @@ body {
 .social-link-instagram:focus .icon-instagram,
 .social-link-twitter:focus .icon-twitter,
 .social-link-facebook:focus .icon-facebook,
-.social-link-linkedin:focus {
+.social-link-linkedin:focus .icon-linked{
     fill: var(--active-color);
     fill: var(--accent-text-color);
 }
