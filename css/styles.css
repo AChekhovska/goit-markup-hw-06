@@ -666,22 +666,14 @@ body {
 .general {
     display: flex;
     align-items: baseline;
-}
-
-.footer-box-address {
-    margin-right: 70px;
-}
-
-.footer-box {
-    margin-right: 90px;
+    justify-content: space-between;
 }
 
 .footer-subscription {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    margin-left: 93px;
+    position: relative;    
 }
 
 .subscription {
@@ -691,8 +683,7 @@ body {
     line-height: 1.14;
     text-align: left;
     text-transform: uppercase;
-    margin-bottom: 20px;
-    margin-left: 93px;
+    margin-bottom: 20px;    
 }
 
 .mail-form {
@@ -702,14 +693,17 @@ body {
     height: 50px;
     padding-top: 15px;
     padding-left: 16px;
-    padding-bottom: 15px;
-    margin-right: 10px;
+    padding-bottom: 15px;    
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.footer-subscription-field{
+    margin-right: 10px;
 }
 
 .footer-button {
@@ -758,7 +752,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 528px;
-    height: 581px;
+    min-height: 581px;
     padding: 40px;
     background-color: var(--main-background-color);
 }
@@ -776,7 +770,15 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     padding: 0;
+    cursor: pointer;
+    transition: var(--transition-dur-and-func);
 }
+
+.modal-close-button:hover,
+.modal-close-button:focus{
+    fill: var(--active-color);
+}
+
 
 .backdrop.is-hidden {
     visibility: hidden;
@@ -790,8 +792,7 @@ body {
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: 0.03em;
-    text-align: center;
-    text-transform: uppercase;
+    text-align: center;    
     margin-bottom: 12px;
 }
 
@@ -828,11 +829,14 @@ body {
     line-height: 1.17;
     letter-spacing: 0.01em;
     text-align: left;
-    padding-bottom: 4px;
+    margin-bottom: 4px;
 }
 
 .modal-form-field {
     margin-bottom: 10px;
+}
+.modal-form-field-comments {
+    margin-bottom: 20px;
 }
 
 .icon-person,
@@ -888,7 +892,7 @@ body {
     position: absolute;
 }
 
-.icon-check {
+.icon-check {    
     width: 16px;
     height: 15px;
     fill: transparent;
@@ -896,18 +900,16 @@ body {
 
 .modal-form-check:checked+.box-check-agree {
     background-color: var(--btn-order-background-color);
+    fill: var(--accent-text-color);
+    border: none;
 }
 
-.box-check-agree {
+.box-check-agree {    
     width: 16px;
     height: 15px;
     border: 2px solid #212121;
     border-radius: 3px;
     margin-right: 10px;
-}
-
-.modal-form-check:checked+.box-check-agree {
-    fill: var(--accent-text-color);
 }
 
 .modal-form-check:focus+.box-check-agree {
@@ -916,6 +918,7 @@ body {
 
 .modal-form-check-field {
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-bottom: 30px;
     cursor: pointer;
@@ -929,8 +932,9 @@ body {
     align-self: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
-    margin-bottom: 40px;
     transition: background-color var(--transition-dur-and-func);
+    border:none;
+    cursor: pointer;
 }
 
 .modal-button-submit:hover,
@@ -945,6 +949,12 @@ body {
 
 .modal-form-check+.icon-check {
     background-color: var(--btn-order-background-color);
+}
+
+.agreement{
+font-weight: 400;
+font-size: 14px;
+line-height: 1.7;
 }
 
 .conditions {
